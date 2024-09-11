@@ -1,3 +1,4 @@
+--geneereri andmed
 create table auto (
 	autoId INT,
 	registrinumber VARCHAR(50),
@@ -105,3 +106,6 @@ insert into auto (autoId, registrinumber, mark, omanik, vaasta) values (97, '028
 insert into auto (autoId, registrinumber, mark, omanik, vaasta) values (98, '222 TYT', 'Mercedes-Benz', 'Zoovu', 2004);
 insert into auto (autoId, registrinumber, mark, omanik, vaasta) values (99, '829 IJO', 'BMW', 'Bubblebox', 2005);
 insert into auto (autoId, registrinumber, mark, omanik, vaasta) values (100, '748 ZJR', 'Volkswagen', 'Yoveo', 2000);
+--xml jada loomine
+select mark as '@mark',registrinumber,mark,vaasta,omanik from auto for xml path('auto'), ROOT('autod');
+-- mark as '@mark' - mark on auto atribuut 
